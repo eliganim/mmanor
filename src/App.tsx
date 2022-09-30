@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Box, Flex } from '@chakra-ui/react'
-import AboutMe from './AboutMe'
-import ContactMe from './ContactMe'
 import Footer from './Footer'
 import Header from './Header'
-import Home from './Home'
-import Lectures from './Lectures'
-import Media from './Media'
-import Services from './Services'
-import Workshops from './Workshops'
+import AboutMe from './screens/AboutMe'
+import ContactMe from './screens/ContactMe'
+import Home from './screens/Home'
+import Lectures from './screens/Lectures'
+import Media from './screens/Media'
+import NotFound from './screens/NotFound'
+import Services from './screens/Services'
+import Workshops from './screens/Workshops'
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <Flex px='20px' w='full' justifyContent='center'>
         <Box w='1024px'>
           <Routes>
+            <Route path='*' element={<NotFound />} />
             <Route path='/' element={<Home />} />
             <Route path='/about-me' element={<AboutMe />} />
             <Route path='/services' element={<Services />} />

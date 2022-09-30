@@ -1,5 +1,6 @@
 {
   "name": "mmanor-site",
+  "homepage": "https://mmanor.co.il",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +25,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build; cp ./src/.htaccess ./build/.htaccess",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },

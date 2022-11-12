@@ -4,6 +4,7 @@ const Media = () => {
   return (
     <>
       <Heading>מדיה</Heading>
+      <br />
       <Heading size='md'>וידאו</Heading>
       <AspectRatio maxW='560px' ratio={16 / 9}>
         <iframe

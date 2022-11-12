@@ -4,6 +4,7 @@ const Lectures = () => {
   return (
     <>
       <Heading>הרצאות</Heading>
+      <br />
       <Heading size='md'>הרצאות לצוותים/אנשי מקצוע/מטפלים עיקריים</Heading>
       <List styleType='' px='20px'>
         <ListItem>

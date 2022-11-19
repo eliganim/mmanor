@@ -32,7 +32,14 @@ const Header = () => {
     <>
       <Show below='md'>
         <MenuDrawer isOpen={isOpen} onClose={onClose} />
-        <Flex bgColor='lightBrown' alignItems='center' py={`${MOBILE_CONTENT_PADDING}px`} position='sticky' top='0px'>
+        <Flex
+          bgColor='lightBrown'
+          alignItems='center'
+          py={`${MOBILE_CONTENT_PADDING}px`}
+          position='sticky'
+          top='0px'
+          zIndex='docked'
+        >
           <Image
             src={logoChair}
             maxH={`${MOBILE_CONTENT_HEIGHT}px`}
@@ -57,7 +64,7 @@ const Header = () => {
         </Flex>
       </Show>
       <Hide below='md'>
-        <Flex flexDir='column' bgColor='lightBrown' alignItems='center'>
+        <Flex flexDir='column' bgColor='lightBrown' alignItems='center' pt='16px'>
           <Flex>
             <Hide below='sm'>
               <Image

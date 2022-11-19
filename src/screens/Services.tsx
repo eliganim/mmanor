@@ -1,10 +1,9 @@
 import { useSearchParams } from 'react-router-dom'
-import { Heading, Link, List, ListItem } from '@chakra-ui/react'
+import { Box, Heading, Link, List, ListItem } from '@chakra-ui/react'
 
 const Services = () => {
   const [params] = useSearchParams()
   const service = params.get('service')
-  const textAlign = 'right'
   let content = <></>
 
   if (service) {
@@ -12,7 +11,7 @@ const Services = () => {
       case 'rights':
         content = (
           <>
-            <Heading textAlign={textAlign}>מיצוי זכויות לגיל השלישי</Heading>
+            <Heading textAlign='right'>מיצוי זכויות לגיל השלישי</Heading>
             <p>
               רבים מבני הגיל השלישי, כלל אינם מודעים לזכויות המגיעות להם מרשויות וגורמים שונים במדינה. דוגמה נפוצה לכך -
               לא פעם אני פוגשת באנשים מבוגרים אשר שילמו במשך שנים דמי ביטוח לאומי והפרישו כספים לביטוח הסיעודי ומעולם לא
@@ -201,7 +200,7 @@ const Services = () => {
   }
 
   return (
-    <>
+    <Box w='1024px'>
       {content}
       {service && <br />}
       {service ? <Heading>תחומי שירות נוספים</Heading> : <Heading>תחומי השירות</Heading>}
@@ -231,7 +230,7 @@ const Services = () => {
           <Link href='?service=soultalk'>שיחת נפש</Link>
         </ListItem>
       </List>
-    </>
+    </Box>
   )
 }
 

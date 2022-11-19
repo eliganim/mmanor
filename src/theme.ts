@@ -13,6 +13,7 @@ const theme = extendTheme({
     sPurple: '#A06CD5',
     sBlue: '#3D5A6C',
     sLightBlue: '#9FC3D5',
+    bgColor: '#F9F9F9',
   }
 })
 

@@ -1,8 +1,8 @@
-import { AspectRatio, Heading } from '@chakra-ui/react'
+import { AspectRatio, Box, Heading } from '@chakra-ui/react'
 
 const Media = () => {
   return (
-    <>
+    <Box w='1024px'>
       <Heading>מדיה</Heading>
       <br />
       <Heading size='md'>וידאו</Heading>
@@ -16,7 +16,7 @@ const Media = () => {
       </AspectRatio>
       <br />
       <Heading size='md'>מאמרים</Heading>
-    </>
+    </Box>
   )
 }
 

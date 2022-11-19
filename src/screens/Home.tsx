@@ -72,10 +72,12 @@ const Home = () => {
         borderColor='sBlue'
         borderRadius='md'
         flexDir='column'
+        bgColor='white'
+        onClick={() => navigate(`services?service=${service.link}`)}
       >
         <Image mt='20px' src={`/icons/${service.icon}.png`} boxSize='50px' mx='auto' />
         <Spacer />
-        <Text h='72px' textAlign='center' verticalAlign='center' fontWeight='extrabold'>
+        <Text h='72px' textAlign='center' verticalAlign='center' fontWeight='extrabold' textColor='darkBrown'>
           {service.title}
         </Text>
       </Flex>

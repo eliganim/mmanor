@@ -108,7 +108,7 @@ const Header = () => {
                   <Link href='/services?service=rights'>מיצוי זכויות לגיל השלישי</Link>
                 </MenuItem>
                 <MenuItem>
-                  <Link href='/services?service=legal'>תכנון משפטי – יפוי כח רפואי מתמשך/החלטות לגבי סוף החיים</Link>
+                  <Link href='/services?service=legal'>תכנון משפטי – יפוי כח רפואי מתמשך / החלטות לגבי סוף החיים</Link>
                 </MenuItem>
                 <MenuItem>
                   <Link href='/services?service=logotherapy'>לוגותרפיה - יצירת משמעות בגיל השלישי</Link>

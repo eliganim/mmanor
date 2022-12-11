@@ -6,7 +6,7 @@ const Lectures = () => {
       <Heading>הרצאות</Heading>
       <br />
       <Heading size='md'>הרצאות לצוותים/אנשי מקצוע/מטפלים עיקריים</Heading>
-      <List styleType='' px='20px'>
+      <List styleType='' px='20px' spacing='10px' pt='10px'>
         <ListItem>
           ירידה קוגנטיבית/דמנציה – הסבר אודות שלבי המחלה, התמודדות עם התנהגויות מאתגרות, התערבויות טיפוליות ומשפחתיות.
         </ListItem>

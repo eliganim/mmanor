@@ -34,7 +34,7 @@ const Services = () => {
       case 'legal':
         content = (
           <>
-            <Heading>תכנון משפטי – יפוי כח רפואי מתמשך/החלטות לגבי סוף החיים</Heading>
+            <Heading>תכנון משפטי – יפוי כח רפואי מתמשך / החלטות לגבי סוף החיים</Heading>
             <p>
               הזדמנות להכיר ולשמוע על האפשרויות הקיימות בחוק לתכנון העתיד מבחינה רפואית וכלכלית. רבים מאיתנו חוששים
               ולעתים אף מאוימים ממחשבות על העתיד לבוא, ולעתים גם ילדינו/נכדינו נמנעים משיחה אודות נושאים מורכבים אלו בשל
@@ -204,12 +204,12 @@ const Services = () => {
       {content}
       {service && <br />}
       {service ? <Heading>תחומי שירות נוספים</Heading> : <Heading>תחומי השירות</Heading>}
-      <List styleType='' px='20px'>
+      <List styleType='' px='20px' spacing='10px' pt='10px'>
         <ListItem>
           <Link href='?service=rights'>מיצוי זכויות לגיל השלישי</Link>
         </ListItem>
         <ListItem>
-          <Link href='?service=legal'>תכנון משפטי – יפוי כח רפואי מתמשך/החלטות לגבי סוף החיים</Link>
+          <Link href='?service=legal'>תכנון משפטי – יפוי כח רפואי מתמשך / החלטות לגבי סוף החיים</Link>
         </ListItem>
         <ListItem>
           <Link href='?service=logotherapy'>לוגותרפיה - יצירת משמעות בגיל השלישי</Link>

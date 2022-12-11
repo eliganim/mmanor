@@ -200,7 +200,7 @@ const Services = () => {
   }
 
   return (
-    <Box w='1024px'>
+    <Box>
       {content}
       {service && <br />}
       {service ? <Heading>תחומי שירות נוספים</Heading> : <Heading>תחומי השירות</Heading>}

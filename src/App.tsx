@@ -24,12 +24,7 @@ function App() {
         w='full'
         justifyContent='center'
       >
-        <Box
-          w={isHomePage ? 'full' : '1024px'}
-          //maxW={isHomePage ? 'full' : '1024px'}
-          minW='320px'
-          my={isHomePage ? '0px' : '20px'}
-        >
+        <Box w={isHomePage ? 'full' : '1024px'} minW='320px' my={isHomePage ? '0px' : '20px'}>
           <Routes>
             <Route path='*' element={<NotFound />} />
             <Route path='/' element={<Home />} />

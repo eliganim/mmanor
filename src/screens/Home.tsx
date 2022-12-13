@@ -10,6 +10,7 @@ import {
   Image,
   Spacer,
   Text,
+  useBreakpoint,
 } from '@chakra-ui/react'
 import groupPhoto from '../assets/group-photo.png'
 
@@ -22,7 +23,7 @@ const services = [
     icon: 'rights',
   },
   {
-    title: 'תכנון משפטי – יפוי כח רפואי / החלטות לגבי סוף החיים',
+    title: 'יפוי כח רפואי מתמשך / החלטות לגבי סוף החיים',
     link: 'legal',
     icon: 'legal',
   },
@@ -60,11 +61,15 @@ const services = [
 
 const Home = () => {
   const navigate = useNavigate()
+  const breakpoint = useBreakpoint()
+  console.log(breakpoint)
+  const isSmall = ['base', 'sm'].includes(breakpoint)
+  const elementWidth = isSmall ? '135px' : '200px'
 
   const serviceBox = (service: { title: string; link: string; icon: string }) => {
     return (
       <Flex
-        boxSize='200px'
+        boxSize={elementWidth}
         mx='auto'
         px='10px'
         py='20px'
@@ -75,9 +80,21 @@ const Home = () => {
         bgColor='white'
         onClick={() => navigate(`services?service=${service.link}`)}
       >
-        <Image mt='20px' src={`/icons/${service.icon}.png`} boxSize='50px' mx='auto' />
+        <Image
+          mt={isSmall ? '10px' : '20px'}
+          src={`/icons/${service.icon}.png`}
+          boxSize={isSmall ? '30px' : '50px'}
+          mx='auto'
+        />
         <Spacer />
-        <Text h='72px' textAlign='center' verticalAlign='center' fontWeight='extrabold' textColor='darkBrown'>
+        <Text
+          h='72px'
+          textAlign='center'
+          verticalAlign='center'
+          fontWeight='extrabold'
+          textColor='darkBrown'
+          fontSize={isSmall ? 'sm' : 'md'}
+        >
           {service.title}
         </Text>
       </Flex>
@@ -100,9 +117,7 @@ const Home = () => {
       <Flex flexDir='column' align='center' justify='center'>
         <HStack px='20px' pt='20px'>
           <Box>
-            <Text fontFamily='Valera Round' fontSize='2xl'>
-              עובדת סוציאלית בעלת התמחות בתחום זקנה, שיקום ובריאות.
-            </Text>
+            <Text fontSize='2xl'>עובדת סוציאלית בעלת התמחות בתחום זקנה, שיקום ובריאות.</Text>
             <Text fontSize='2xl'>מעניקה יעוץ ותמיכה רגשית לאנשים בגיל הזקנה, לבני משפחה ומטפלים עיקריים.</Text>
             <br />
             <Text fontSize='lg'>הטיפולים מתקיימים בקליניקה בגבעת שמואל או בביקור בבית האדם המבוגר.</Text>
@@ -132,7 +147,7 @@ const Home = () => {
         mx='auto'
         gap='20px'
         maxW='800px'
-        templateColumns='repeat(auto-fit, minmax(200px, 1fr))'
+        templateColumns={`repeat(auto-fit, minmax(${elementWidth}, 1fr))`}
       >
         {services.map((service) => (
           <GridItem>{serviceBox(service)}</GridItem>

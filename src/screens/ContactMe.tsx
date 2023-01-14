@@ -9,6 +9,7 @@ import {
   Input,
   Show,
   Text,
+  Textarea,
   VStack,
 } from '@chakra-ui/react'
 import logoChair from '../assets/logo-chair.png'
@@ -17,6 +18,7 @@ const ContactMe = () => {
   const [name, setName] = useState('')
   const [phone, setPhone] = useState('')
   const [email, setEmail] = useState('')
+  const [description, setDescription] = useState('')
   const [submitted, setSubmitted] = useState(false)
   const [isLoading, setIsLoading] = useState(false)
   const [isError, setIsError] = useState(false)
@@ -41,7 +43,7 @@ const ContactMe = () => {
     setIsLoading(true)
     fetch('https://public.herotofu.com/v1/d3b03410-78d9-11ed-a126-b172cf164538', {
       method: 'POST',
-      body: JSON.stringify({ name, phone, email }),
+      body: JSON.stringify({ name, phone, email, description }),
       headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
@@ -115,6 +117,15 @@ const ContactMe = () => {
             />
             <FormErrorMessage>שדה חובה</FormErrorMessage>
           </FormControl>
+          <FormControl>
+            <FormLabel pt='16px'>תוכן הפניה</FormLabel>
+            <Textarea
+              onChange={(event) => {
+                setDescription(event.target.value)
+              }}
+            />
+          </FormControl>
+
           <Button
             isLoading={isLoading}
             onClick={() => onSubmit()}

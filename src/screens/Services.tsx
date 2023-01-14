@@ -182,7 +182,7 @@ const Services = () => {
       case 'soultalk':
         content = (
           <>
-            <Heading>שיחת נפש</Heading>
+            <Heading>שיחת נפש - תמיכה רגשית</Heading>
             <p>
               לעתים, כל שאנו זקוקים לו הוא מישהו שישב לצידנו ויקשיב, שישיב אלינו מבט חומל. מישהו לשתות בחברתו את כוס
               הקפה ולספר על שהיה ואת המחשבות על "שיהיה" מבלי לחשוש שירתע או ישתעמם לשמע הסיפורים החוזרים או המחשבות
@@ -227,7 +227,7 @@ const Services = () => {
           <Link href='?service=dementia'>התמודדות עם ירידה קוגנטיבית ודמנציה במשפחה</Link>
         </ListItem>
         <ListItem>
-          <Link href='?service=soultalk'>שיחת נפש</Link>
+          <Link href='?service=soultalk'>שיחת נפש - תמיכה רגשית</Link>
         </ListItem>
       </List>
     </Box>

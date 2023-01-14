@@ -126,7 +126,7 @@ const Header = () => {
                   <Link href='/services?service=dementia'>התמודדות עם ירידה קוגנטיבית ודמנציה במשפחה</Link>
                 </MenuItem>
                 <MenuItem>
-                  <Link href='/services?service=soultalk'>שיחת נפש</Link>
+                  <Link href='/services?service=soultalk'>שיחת נפש - תמיכה רגשית</Link>
                 </MenuItem>
               </MenuList>
             </Menu>{' '}

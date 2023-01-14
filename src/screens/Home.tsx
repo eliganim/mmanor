@@ -53,7 +53,7 @@ const services = [
     icon: 'dementia',
   },
   {
-    title: 'שיחת נפש',
+    title: 'שיחת נפש - תמיכה רגשית',
     link: 'soultalk',
     icon: 'soultalk',
   },

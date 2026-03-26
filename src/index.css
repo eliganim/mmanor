@@ -1,0 +1,60 @@
+:root {
+  --cream: #faf7f2;
+  --cream-dark: #f0ebe3;
+  --teal: #2a6b6b;
+  --teal-dark: #1e4f4f;
+  --brown: #8b6f47;
+  --brown-light: #a68b5b;
+  --text: #4a4a4a;
+  --text-light: #6b6b6b;
+  --white: #ffffff;
+  --border: #e0d8cc;
+  --card-bg: #f5f0e8;
+  --icon-blue: #4a90b8;
+  --icon-pink: #e8a0a0;
+  --icon-green: #6b9b6b;
+
+  font-family: 'Heebo', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--white);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  direction: rtl;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: var(--teal-dark);
+  font-weight: 700;
+}
+
+a {
+  color: var(--brown);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+}

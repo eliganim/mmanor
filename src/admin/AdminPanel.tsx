@@ -25,23 +25,25 @@ export default function AdminPanel() {
   const [dirty, setDirty] = useState<Set<string>>(new Set())
 
   useEffect(() => {
-    loadContent()
-  }, [])
+    let cancelled = false
 
-  const loadContent = async () => {
-    const { data, error } = await supabase
+    supabase
       .from('site_content')
       .select('*')
       .order('section')
       .order('key')
+      .then(({ data, error }) => {
+        if (cancelled) return
+        if (error) {
+          setMessage(`שגיאה בטעינה: ${error.message}`)
+        } else {
+          setRows(data ?? [])
+        }
+        setLoading(false)
+      })
 
-    if (error) {
-      setMessage(`שגיאה בטעינה: ${error.message}`)
-    } else {
-      setRows(data ?? [])
-    }
-    setLoading(false)
-  }
+    return () => { cancelled = true }
+  }, [])
 
   const handleChange = (id: string, value: string) => {
     setRows((prev) => prev.map((r) => (r.id === id ? { ...r, value } : r)))

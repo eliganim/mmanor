@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container footer-inner">
         <div className="footer-brand">
           <div className="footer-logo">מוריה מנור</div>
-          <p>קליניקה פרטית לטיפול פסיכולוגי<br />ייעוץ טומכת לגיל השלישי.</p>
+          <p>קליניקה פרטית לטיפול פסיכולוגי<br />ולייעוץ לגיל השלישי.</p>
         </div>
         <div className="footer-bottom">
           <div className="footer-links">

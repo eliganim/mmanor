@@ -22,9 +22,31 @@ export default function Contact() {
       setFormData((prev) => ({ ...prev, [field]: e.target.value }))
     }
 
-  const handleSubmit = (e: FormEvent) => {
+  const [sending, setSending] = useState(false)
+  const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
+    setSending(true)
+    setStatus('idle')
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        setFormData({ name: '', phone: '', location: '', subject: '', message: '' })
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+    setSending(false)
   }
 
   return (
@@ -83,7 +105,11 @@ export default function Contact() {
               onChange={handleChange('message')}
             />
           </div>
-          <button type="submit" className="btn btn-primary btn-lg">שליחת הודעה</button>
+          {status === 'success' && <p className="form-success">ההודעה נשלחה בהצלחה! אחזור אליכם בהקדם.</p>}
+          {status === 'error' && <p className="form-error">שגיאה בשליחה, אנא נסו שוב.</p>}
+          <button type="submit" className="btn btn-primary btn-lg" disabled={sending}>
+            {sending ? 'שולח...' : 'שליחת הודעה'}
+          </button>
         </form>
         <div className="contact-info">
           <div className="contact-item">
@@ -92,7 +118,7 @@ export default function Contact() {
             </svg>
             <div>
               <span className="contact-label">טלפון ישיר</span>
-              <span className="contact-value">052-1234567</span>
+              <span className="contact-value">050-3955388</span>
             </div>
           </div>
           <div className="contact-item">
@@ -102,7 +128,7 @@ export default function Contact() {
             </svg>
             <div>
               <span className="contact-label">דואר אלקטרוני</span>
-              <span className="contact-value">maria@manor-therapy.co.il</span>
+              <span className="contact-value">moriahmanor@gmail.com</span>
             </div>
           </div>
         </div>

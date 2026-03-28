@@ -118,10 +118,11 @@
   background: linear-gradient(135deg, #c9c0b6 0%, #a69888 100%);
 }
 
-.hero-image-placeholder {
+.hero-photo {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, #d4ccc2 0%, #b8a898 50%, #a09080 100%);
+  object-fit: cover;
+  object-position: center top;
 }
 
 .hero-quote {
@@ -416,6 +417,33 @@
   display: block;
   width: auto;
   margin: 8px auto 0;
+}
+
+.contact-form .btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-success {
+  text-align: center;
+  color: #2a6b2a;
+  background: #f0f7f0;
+  border: 1px solid #c0dcc0;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.form-error {
+  text-align: center;
+  color: #8b2020;
+  background: #fdf0f0;
+  border: 1px solid #e0c0c0;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .contact-info {

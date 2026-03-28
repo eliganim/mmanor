@@ -1,4 +1,5 @@
 import content from '../content'
+import heroPhoto from '../assets/hero-photo.jpg'
 
 export default function Hero() {
   const c = content.hero
@@ -9,7 +10,7 @@ export default function Hero() {
       <div className="container hero-inner">
         <div className="hero-image">
           <div className="hero-image-wrapper">
-            <div className="hero-image-placeholder" />
+            <img src={heroPhoto} alt="מוריה מנור" className="hero-photo" />
           </div>
           <div className="hero-quote">
             <p>{c.quote}</p>

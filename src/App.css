@@ -70,9 +70,17 @@
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 22px;
   font-weight: 700;
   color: var(--teal-dark);
+}
+
+.logo-icon {
+  height: 40px;
+  width: auto;
 }
 
 .nav {
@@ -499,9 +507,17 @@
 }
 
 .footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 20px;
   font-weight: 700;
   color: var(--teal-dark);
+}
+
+.footer-logo-icon {
+  height: 36px;
+  width: auto;
 }
 
 .footer-brand p {

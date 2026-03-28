@@ -1,9 +1,14 @@
+import logo from '../assets/logo.png'
+
 export default function Footer() {
   return (
     <footer className="footer">
       <div className="container footer-inner">
         <div className="footer-brand">
-          <div className="footer-logo">מוריה מנור</div>
+          <div className="footer-logo">
+            <img src={logo} alt="מוריה מנור" className="footer-logo-icon" />
+            מוריה מנור
+          </div>
           <p>קליניקה פרטית לטיפול פסיכולוגי<br />ולייעוץ לגיל השלישי.</p>
         </div>
         <div className="footer-bottom">

@@ -1,8 +1,13 @@
+import logo from '../assets/logo.png'
+
 export default function Header() {
   return (
     <header className="header">
       <div className="container header-inner">
-        <div className="logo">מוריה מנור</div>
+        <div className="logo">
+          <img src={logo} alt="מוריה מנור" className="logo-icon" />
+          מוריה מנור
+        </div>
         <nav className="nav">
           <a href="#home" className="nav-link active">בית</a>
           <a href="#services" className="nav-link">שירותים</a>

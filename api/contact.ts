@@ -17,8 +17,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     await resend.emails.send({
       from: 'אתר מוריה מנור <onboarding@resend.dev>',
-      //to: 'moriahmanor@gmail.com',
-      to: 'eli.ganem@gmail.com',
+      to: 'moriahmanor@gmail.com',
       subject: `פנייה חדשה מהאתר${subject ? `: ${subject}` : ''}`,
       html: `
         <div dir="rtl" style="font-family: sans-serif; line-height: 1.8;">
